@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    scroll-behavior: smooth;
+
+}
+
+.fps-slider {
+    width: 200px;
+
+}
+
+#canvas {
+    /* background-image: url(skybg.jpeg) */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
+@media (max-width: 670px) {
+    .first-row {
+        height: 180px !important;
+    }
+
+    .second-row {
+        height: 180px !important;
+    }
+
+    .third-row {
+        height: 200px !important;
+    }
+}
+
+.first-row {
+    border-bottom: 1px solid black;
+    height: 80px;
+}
+
+.second-row {
+    border-bottom: 1px solid black;
+    height: 80px;
+}
+
+.third-row {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#choosecolor {
+    height: 50px;
+    width: 150px;
+    margin: 10px 0 10px;
+    border-color: black;
+    font-size: medium;
+    font-weight: 800;
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+    margin: 10px 0 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-color: black;
+    font-weight: 800;
+}
+
+
+.btn:hover {
+    background-color: rgb(230, 230, 230);
+    border-color: black;
+}
+
+#human {
+    width: 300px;
+    height: 50px;
+}
+
+.rule {
+    height: 150px;
+    padding-top: 33px;
+}
+
+
+.input-group {
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.input-group-text {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-color: black;
+    font-weight: 800;
+}
+
+.input-textarea {
+    border-radius: 5px;
+    border-color: black;
+}
+
+.form-select-css {
+    border-radius: 5px;
+    border-color: black;
+    font-weight: 900;
+    text-align: center;
+}
+
+.theme-text {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    font-weight: 900;
+    font-size: 50px;
+}

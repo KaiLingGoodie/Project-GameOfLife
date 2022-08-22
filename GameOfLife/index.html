@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/d3592e95a4.js" crossorigin="anonymous"></script>
+  <title>Game of Life</title>
+</head>
+
+<body>
+  <div class="buttoncontainer">
+    <div class="row first-row">
+      <div class="col col-item">
+        <button type="button" class="btn shadow-none" id="reset-game">
+          <i class="fa-solid fa-rotate-left"></i>
+          Reset
+        </button>
+      </div>
+
+      <div class="col col-item">
+        <button type="button" class="btn shadow-none" id="start-random">
+          <i class="fa-solid fa-shuffle"></i>
+          Random
+        </button>
+      </div>
+
+      <div class="col col-item">
+        <button type="button" class="btn shadow-none" id="btnstartstop">
+          <i class="fa-solid fa-circle-pause"></i>
+          Stop
+        </button>
+      </div>
+
+      <div class="col col-item">
+        <div class="dropdown">
+          <select class="form-select form-select-sm shadow-none" aria-label=".form-select-sm example" id="choosecolor">
+            <option selected>Color</option>
+            <option value="1">Rainbow</option>
+            <option value="2">Blue</option>
+            <option value="3">Red</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row second-row">
+      <div class="col">
+        <button type="button" class="btn shadow-none" id="human">
+          <i class="fa-solid fa-person"></i>
+          Human
+        </button>
+      </div>
+      <div class="col">
+        <div class="fps-slider">
+          <label for="customRange2" class="form-label">Frame per Second: <span id="demo"></span></label>
+          <input type="range" class="form-range" min="0" max="30" id="customRange2" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row third-row">
+
+    <div class="col col-rule">
+      <div class="rule">
+        <div>Die of Loneliness when Neighbors <: </div>
+            <select class="form-select form-select-sm form-select-css shadow-none" aria-label=".form-select-sm example"
+              id="loneliness">
+              <option selected>2</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+        </div>
+      </div>
+
+
+      <div class="col col-rule">
+        <div class="rule">
+          <div>Die of Overpopulation when Neighbors >:</div>
+          <select class="form-select form-select-sm form-select-css shadow-none" aria-label=".form-select-sm example"
+            id="overpopulation">
+            <option selected>3</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="col col-rule">
+        <div class="rule">
+          <div>New life due to Reproduction when Neighbors =:</div>
+          <select class="form-select form-select-sm form-select-css shadow-none" aria-label=".form-select-sm example"
+            id="reproduction">
+            <option selected>3</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- input group -->
+    <!-- <div class="input-group">
+      <span class="input-group-text" id="patterninput">Pattern</span>
+      <textarea class="form-control input-textarea shadow-none" aria-label="With textarea"></textarea>
+    </div> -->
+
+
+    <!-- Canvas -->
+    <div class="theme-text">GAME BOARD</div>
+    <div id="canvas"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="https://kit.fontawesome.com/d3592e95a4.js" crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
